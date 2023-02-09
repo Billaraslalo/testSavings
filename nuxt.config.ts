@@ -2,9 +2,12 @@
 export default defineNuxtConfig({
   modules: [
       '@nuxtjs/tailwindcss',
-      '@nuxtjs/color-mode'
+      '@nuxtjs/color-mode',
+      '@pinia/nuxt'
   ],
   colorMode: {
+    preference: 'system',
+    fallback: 'dark',
     classSuffix: ''
   }
 })

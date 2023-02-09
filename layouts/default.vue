@@ -1,15 +1,13 @@
 <template>
-<div class="bg-white dark:bg-slate-900">
+  <div class="fixed w-full h-full defaultPrimaryColor">
   <navbar />
-  <sidebar />
 <slot />
+<sidebar />
 </div>
 </template>
 
 <script setup>
-const colorMode = useColorMode()
 
-console.log(colorMode.preference)
 </script>
 
 <style scoped>
