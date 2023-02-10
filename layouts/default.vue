@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed w-full h-full defaultPrimaryColor">
+  <div class="fixed w-full h-full defaultPrimaryColor font-bold">
   <navbar />
 <slot />
 <sidebar />

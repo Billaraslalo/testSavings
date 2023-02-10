@@ -1,9 +1,9 @@
 <template>
   <div
-    class="absolute flex flex-col h-screen w-56 p-3 defaultSecondaryColor shadow-md"
+    class="absolute flex flex-col h-screen w-56 p-3 defaultSecondaryColor shadow-2xl"
     :class="store.sidebarActive ? 'slide-in-left' : 'slide-out-left'"
   >
-  <button @click="store.sidebarToggle()">
+  <button class="align-start" @click="store.sidebarToggle()">
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
@@ -51,9 +51,9 @@
         class="w-full py-2 pl-10 text-sm rounded-md focus:outline-none"
       />
   </div>
-    <div class="flex-1">
-      <ul class="pt-2 pb-4 space-y-1 text-sm">
-        <li class="rounded-sm">
+    <div class="flex-1 items">
+      <ul class="pt-2 pb-4 space-y-1 text-md">
+        <li class="rounded-sm group">
           <a
             href="#"
             class="flex items-center p-2 space-x-3 rounded-md"
@@ -73,10 +73,10 @@
               />
               </svg>
 
-              <span class="">Home</span>
+              <span class="group-hover:text-zinc-800">Home</span>
             </a>
         </li>
-        <li class="rounded-sm">
+        <li class="rounded-sm group">
           <a
             href="#"
             class="flex items-center p-2 space-x-3 rounded-md"
@@ -96,10 +96,10 @@
                 />
               </svg>
 
-              <span class="">Inbox</span>
+              <span class="group-hover:text-zinc-800">Inbox</span>
             </a>
           </li>
-        <li class="rounded-sm">
+        <li class="rounded-sm group">
           <a
             href="#"
             class="flex items-center p-2 space-x-3 rounded-md"
@@ -119,10 +119,10 @@
             />
             </svg>
 
-          <span class=""> Orders </span>
+          <span class="group-hover:text-zinc-800"> Orders </span>
         </a>
       </li>
-      <li class="rounded-sm">
+      <li class="rounded-sm group">
         <a
           href="#"
           class="flex items-center p-2 space-x-3 rounded-md"
@@ -147,10 +147,10 @@
           />
           </svg>
 
-          <span class=""> Settings </span>
+          <span class="group-hover:text-zinc-800"> Settings </span>
         </a>
       </li>
-      <li class="rounded-sm">
+      <li class="rounded-sm group">
         <a
           href="#"
           class="flex items-center p-2 space-x-3 rounded-md"
@@ -170,7 +170,7 @@
           />
           </svg>
 
-          <span class=""> Logout </span>
+          <span class="group-hover:text-zinc-800"> Logout </span>
         </a>
       </li>
       </ul>
@@ -187,5 +187,6 @@ const store = useMainStore()
 </script>
 
 <style scoped>
+
 
 </style>

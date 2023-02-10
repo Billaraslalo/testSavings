@@ -4,10 +4,10 @@
 
 
 .defaultPrimaryColor{
-  @apply bg-white dark:bg-slate-700 text-black dark:text-white;
+  @apply bg-slate-50 dark:bg-darkBlue text-black dark:text-white;
 }
 .defaultSecondaryColor{
-  @apply bg-emerald-400 dark:bg-violet-900 text-black dark:text-white;
+  @apply bg-lightGreen dark:bg-darkGreen text-white;
 }
 .swing-in-left-bck {
   @apply animate-[swing-in-left-bck_0.35s_ease-in_both];

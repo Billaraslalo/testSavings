@@ -16,6 +16,14 @@ module.exports = {
       },
       width: {
         "2/9.5": "21%"
+      },
+      colors: {
+        "lightGreen": "#6fbc91",
+        "lightWhite": "EEEEEE",
+        "darkGreen": "#205843",
+        "darkBlue": "#1a2c3c",
+        
+
       }
     },
   },
