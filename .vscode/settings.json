@@ -8,12 +8,14 @@
     "**/Thumbs.db": true,
     ".nuxt": true,
     "public": true,
-    "node_modules": true
+    "node_modules": true,
+    ".vscode": true
   },
   "hide-files.files": [
     ".nuxt",
     "public",
-    "node_modules"
+    "node_modules",
+    ".vscode"
   ],
   "editor.tabSize": 2
 }
