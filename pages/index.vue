@@ -1,6 +1,7 @@
 <template>
 <div>
-<div px-4>
+<div class="fixed flex top-40 left-40">
+  hello
 </div>
 </div>
 </template>

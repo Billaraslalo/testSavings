@@ -1,16 +1,17 @@
 <template>
   <div
-    class="absolute flex flex-col h-screen w-56 p-3 defaultSecondaryColor shadow-2xl"
+    class="absolute flex flex-col h-screen w-36 md:w-56 p-3 defaultSecondaryColor shadow-2xl"
     :class="store.sidebarActive ? 'slide-in-left' : 'slide-out-left'"
   >
-  <button class="align-start" @click="store.sidebarToggle()">
+  <div class="grid grid-cols-4">
+    <button @click="store.sidebarToggle()">
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   viewBox="0 0 24 24"
   stroke-width="1.5"
   stroke="currentColor"
-  class="w-6 h-6"
+  class="w-6 h-6 group-hover:text-zinc-800"
 >
   <path
     stroke-linecap="round"
@@ -19,10 +20,14 @@
     />
 </svg>
 </button>
-  <div class="pt-20 space-y-3">
+<div class="col-span-3 text-xl">
+  SavingsApp
+</div>
+</div>
+  <div class="pt-10">
     <div class="relative">
       <span
-        class="absolute inset-y-0 left-0 flex items-center py-4"
+        class="absolute inset-y-0 left-0 flex items-center"
       >
         <button
           type="submit"
@@ -34,7 +39,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="black"
-              class="w-6 h-6"
+              class="w-6 h-6 group-hover:text-zinc-800"
             >
             <path
               stroke-linecap="round"
@@ -51,7 +56,7 @@
         class="w-full py-2 pl-10 text-sm rounded-md focus:outline-none"
       />
   </div>
-    <div class="flex-1 items">
+    <div class="pt-4 flex-1">
       <ul class="pt-2 pb-4 space-y-1 text-md">
         <li class="rounded-sm group">
           <a
@@ -64,7 +69,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6 "
+                class="w-6 h-6 group-hover:text-zinc-800"
             >
               <path
                 stroke-linecap="round"
@@ -87,7 +92,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6 "
+                class="w-6 h-6 group-hover:text-zinc-800"
               >
                 <path
                   stroke-linecap="round"
@@ -110,7 +115,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 "
+              class="w-6 h-6 group-hover:text-zinc-800"
           >
             <path
               stroke-linecap="round"
@@ -133,7 +138,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 "
+            class="w-6 h-6 group-hover:text-zinc-800"
           >
           <path
             stroke-linecap="round"
@@ -161,7 +166,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 "
+            class="w-6 h-6 group-hover:text-zinc-800"
             >
           <path
             stroke-linecap="round"

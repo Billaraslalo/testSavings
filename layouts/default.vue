@@ -1,8 +1,8 @@
 <template>
   <div class="fixed w-full h-full defaultPrimaryColor font-bold">
   <navbar />
-<slot />
-<sidebar />
+  <sidebar />
+  <slot />
 </div>
 </template>
 
