@@ -9,6 +9,9 @@ module.exports = {
   "./nuxt.config.{js,ts}",],
   theme: {
     extend: {
+      screens: {
+        'belowlg': {'max': '1023px'},
+      },
       height: {
         "1/7": "14%",
         "1/8": "12.5%",

@@ -1,6 +1,10 @@
 <template>
-  <div class="fixed w-full h-full defaultPrimaryColor font-bold">
+  <div class="fixed w-full h-full defaultPrimaryColor">
+    <div class="lg:pl-56">
+
+    </div>
   <navbar />
+  <sidebar-small />
   <sidebar />
   <slot />
 </div>

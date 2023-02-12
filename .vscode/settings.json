@@ -17,5 +17,9 @@
     "node_modules",
     ".vscode"
   ],
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "cSpell.words": [
+    "belowlg",
+    "Spendle"
+  ]
 }

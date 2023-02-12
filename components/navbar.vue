@@ -1,6 +1,7 @@
 <template>
 <div class="absolute flex w-full h-1/10 top-0 items-center flex-nowrap justify-between">
-  <button class="self-start mt-3 ml-3" @click="store.sidebarToggle()">
+  <div class="grid grid-cols-6 self-start pt-3 pl-4">
+  <button class="z-20" @click="store.sidebarToggle()">
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
@@ -16,6 +17,10 @@
     />
 </svg>
 </button>
+<div class="col-span-4 text-xl z-20 justify-self-end">
+  Spendle
+</div>
+</div>
   <div class="flex flex-row gap-6">
     <button class="btn">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
