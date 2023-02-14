@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute flex-col h-screen w-14 p-3 defaultSecondaryColor shadow-2xl"
+    class=" absolute flex-col h-screen w-14 p-3 defaultSecondaryColor shadow-2xl"
     :class="store.sidebarActive ? 'lg:fade-out belowlg:hidden': 'lg:flex belowlg:hidden'"
   >
   <div class="pt-10">

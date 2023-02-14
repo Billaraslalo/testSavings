@@ -1,7 +1,24 @@
 <template>
-<div>
-<div class="fixed flex top-40 left-40">
-  hello123
+<div class="h-screen overflow-auto">
+<div class="flex flex-col">
+  <div class="h-60">
+    maou
+  </div>
+  <div class="h-60">
+    maou
+  </div>
+  <div class="h-60">
+    maou
+  </div>
+  <div class="h-60">
+    maou
+  </div>
+  <div class="h-60">
+    maou
+  </div>
+  <div class="h-60">
+    maou
+  </div>
 </div>
 </div>
 </template>
