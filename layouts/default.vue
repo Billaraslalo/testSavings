@@ -1,14 +1,16 @@
 <template>
   <div class="fixed w-full h-full defaultPrimaryColor">
 
-  <navbar />
-  <sidebar-small />
-  <sidebar />
-    <div class="pt-12 lg:pt-16"
-        :class="store.sidebarActive ? 'lg:pl-64' : 'lg:pl-24'">
-  <slot />
+    <navbar />
+    <sidebar-small />
+    <sidebar />
+      <div class="pt-12 lg:pt-16"
+          :class="store.sidebarActive ? 'lg:pl-64' : 'lg:pl-24'">
+        <div class="h-screen overflow-auto">
+          <slot />
+        </div>
+      </div>
     </div>
-</div>
 </template>
 
 <script setup>

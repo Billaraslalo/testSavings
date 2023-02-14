@@ -1,25 +1,24 @@
 <template>
 <div class="flex flex-col">
   <div class="h-60">
-    maou
+    about
   </div>
   <div class="h-60">
-    maou
+    about
   </div>
   <div class="h-60">
-    maou
+    about
   </div>
   <div class="h-60">
-    maou
+    about
   </div>
   <div class="h-60">
-    maou
+    about
   </div>
   <div class="h-60">
-    maou
+    about
   </div>
 </div>
-
 </template>
 
 <script setup>

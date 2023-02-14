@@ -1,5 +1,5 @@
 <template>
-<div class="absolute flex w-full h-12 lg:h-16 top-0 items-center flex-nowrap justify-between shadow-2xl">
+<div class="absolute flex w-full h-12 lg:h-16 top-0 items-center flex-nowrap justify-between shadow-xl">
   <div class="grid grid-cols-6 self-start pt-3 pl-4">
   <button class="z-20" @click="store.sidebarToggle()">
 <svg
@@ -17,9 +17,9 @@
     />
 </svg>
 </button>
-<div class="z-20 col-span-4 text-xl  justify-self-end">
+<NuxtLink to="/" class="z-20 col-span-4 text-xl  justify-self-end">
   Spendle
-</div>
+</NuxtLink>
 </div>
   <div class="flex flex-row gap-6">
     <button class="btn">

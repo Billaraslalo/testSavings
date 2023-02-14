@@ -1,7 +1,7 @@
 <template>
   <div
-    class=" absolute flex-col h-screen w-14 p-3 defaultSecondaryColor shadow-sideShadow"
-    :class="store.sidebarActive ? 'lg:fade-out belowlg:hidden': 'lg:flex belowlg:hidden'"
+    class="belowlg:hidden absolute flex-col h-screen w-14 p-3 defaultSecondaryColor shadow-sideShadow"
+    :class="store.sidebarActive ? 'lg:fade-out': 'lg:flex'"
   >
   <div class="pt-10">
     <div class="relative">
@@ -37,10 +37,9 @@
   </div>
     <div class="pt-4">
       <ul class="pt-2 pb-4 flex flex-col gap-6 items-center text-md">
-        <li class="rounded-sm ">
-          <a
-            href="#"
-            class="rounded-md"
+        <li class="rounded-sm group ">
+          <NuxtLink to="/"
+            class="rounded-md group-hover:text-zinc-800"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,12 +55,11 @@
                 d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
               />
               </svg>
-            </a>
+            </NuxtLink>
         </li>
-        <li class="rounded-sm ">
-          <a
-            href="#"
-            class="rounded-md"
+        <li class="rounded-sm group ">
+          <NuxtLink to="/about"
+            class="rounded-md group-hover:text-zinc-800"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,12 +75,12 @@
                   d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z"
                 />
               </svg>
-            </a>
+            </NuxtLink>
           </li>
-        <li class="rounded-sm ">
+        <li class="rounded-sm group ">
           <a
             href="#"
-            class="rounded-md"
+            class="rounded-md group-hover:text-zinc-800"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,10 +98,10 @@
             </svg>
         </a>
       </li>
-      <li class="rounded-sm ">
+      <li class="rounded-sm group ">
         <a
           href="#"
-          class="rounded-md"
+          class="rounded-md group-hover:text-zinc-800"
       >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -126,10 +124,10 @@
           </svg>
         </a>
       </li>
-      <li class="rounded-sm ">
+      <li class="rounded-sm group ">
         <a
           href="#"
-          class="rounded-md"
+          class="rounded-md group-hover:text-zinc-800"
       >
           <svg
             xmlns="http://www.w3.org/2000/svg"
