@@ -9,6 +9,9 @@ module.exports = {
   "./nuxt.config.{js,ts}",],
   theme: {
     extend: {
+      boxShadow: {
+        'sideShadow' : '25px 0 30px -12px rgb(0 0 0 / 0.25)'
+      },
       screens: {
         'belowlg': {'max': '1023px'},
       },

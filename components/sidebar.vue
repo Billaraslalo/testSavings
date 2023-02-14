@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute flex flex-col h-screen w-36 lg:w-56 p-3 defaultSecondaryColor shadow-2xl"
+    class="absolute flex flex-col h-screen w-36 lg:w-56 p-3 defaultSecondaryColor shadow-sideShadow"
     :class="store.sidebarActive ? 'slide-in-left' : 'slide-out-left'">
   <div class="pt-10">
     <div class="relative">
