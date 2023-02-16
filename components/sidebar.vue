@@ -80,8 +80,7 @@
             </NuxtLink>
           </li>
         <li class="rounded-sm group">
-          <a
-            href="#"
+          <NuxtLink to="#"
             class="flex items-center p-2 space-x-3 rounded-md group-hover:text-zinc-800"
           >
             <svg
@@ -100,7 +99,7 @@
             </svg>
 
           <span> Orders </span>
-        </a>
+          </NuxtLink>
       </li>
       <li class="rounded-sm group">
         <a

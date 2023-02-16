@@ -17,6 +17,7 @@
 import { useMainStore } from '../stores/MainStore'
 
 const store = useMainStore()
+
 </script>
 
 <style scoped>

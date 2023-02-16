@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-
+const layout = "default";
 </script>
 
 <style scoped>
