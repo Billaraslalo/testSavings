@@ -72,9 +72,9 @@ function colorModeToggle() {
 
 
 
-const route = useRoute()
+const route = useRoute();
 
-const isNotLogin = route.meta.layout !== 'login'
+const isNotLogin = route.meta.layout !== 'login';
 </script>
 
 <style scoped>
