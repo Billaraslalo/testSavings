@@ -7,13 +7,11 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     ".nuxt": true,
-    "public": true,
     "node_modules": true,
     ".vscode": true
   },
   "hide-files.files": [
     ".nuxt",
-    "public",
     "node_modules",
     ".vscode"
   ],

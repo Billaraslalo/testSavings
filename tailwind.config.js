@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'sideShadow' : '25px 0 30px -12px rgb(0 0 0 / 0.25)'
+        'sideShadow' : '25px 0 30px -12px rgb(0 0 0 / 0.25)',
+        'loginShadow' : '-7px 8px 6px 1px rgba(0, 0, 0, 0.76)'
       },
       screens: {
         'belowlg': {'max': '1023px'},

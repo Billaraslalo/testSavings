@@ -42,6 +42,9 @@
 .btn {
   @apply grid defaultSecondaryColor rounded-3xl w-9 h-9 items-center justify-center
 }
+.inputField {
+  @apply block w-2/3 h-14 p-3 rounded mb-4 border valid:border-green-500 invalid:border-red-500
+}
 
 @keyframes swing-in-left-bck{0%{transform:rotateY(-70deg);transform-origin:left;opacity:0}100%{transform:rotateY(0);transform-origin:left;opacity:1}}
 @keyframes swing-out-left-fwd{0%{transform:rotateY(0);transform-origin:left;opacity:1}20%{transform:rotateY(-70deg);transform-origin:left;opacity:0}100%{transform:translateX(-800px);opacity:0;}}
