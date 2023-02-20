@@ -1,11 +1,11 @@
 <template>
   <div class="h-screen grid place-items-center">
     <div class="grid grid-cols-2 rounded-md defaultSecondaryColor shadow-loginShadow shadow-fuchsia-500">
-      <div class="text-black grid justify-items-center grid-rows-6 w-96">
+      <form novalidate @submit.prevent="submitForm" class="text-black grid justify-items-center grid-rows-6 w-96">
         <div class="text-white text-4xl font-bold py-7">
           Signup
         </div>
-        <input
+        <div class="block w-2/3 mb-4"><input
           v-model="formData.username" 
           type="text"
           class="inputField"
@@ -15,9 +15,12 @@
           }"
           name="username"
           placeholder="username"
-          @change="v$.username.$touch" />
+          @change="v$.username.$touch"/>
+          <span class="text-xs text-red-500" v-if="v$.username.$error">{{
+            v$.username.$errors[0].$message
+          }}</span></div>
 
-      <input
+      <div class="block w-2/3 mb-4"><input
           v-model="formData.email" 
           type="email"
           class="inputField"
@@ -27,9 +30,12 @@
           }"
           name="email"
           placeholder="Email"
-          @change="v$.email.$touch" />
+          @change="v$.email.$touch"/>
+          <span class="text-xs text-red-500" v-if="v$.email.$error">{{
+            v$.email.$errors[0].$message
+          }}</span></div>
 
-      <input
+      <div class="block w-2/3 mb-4"><input
           v-model="formData.password" 
           type="password"
           class="inputField"
@@ -39,8 +45,11 @@
           }"
           name="password"
           placeholder="Password"
-          @change="v$.password.$touch" />
-      <input
+          @change="v$.password.$touch"/>
+      <span class="text-xs text-red-500" v-if="v$.password.$error">{{
+        v$.password.$errors[0].$message
+      }}</span></div>
+      <div class="block w-2/3 mb-4"><input
           v-model="formData.confirmPassword" 
           type="password"
           class="inputField"
@@ -50,7 +59,18 @@
           }"
           name="confirmPassword"
           placeholder="Confirm Password"
-          @change="v$.confirmPassword.$touch" />
+          @change="v$.confirmPassword.$touch"/>
+          <div
+            class="bg-primary absolute top-full left-1/2 z-20 mt-3 -translate-x-1/2 whitespace-nowrap rounded py-[6px] px-4 text-sm font-semibold text-white opacity-0 group-hover:opacity-100"
+          >
+            <span
+              class="bg-primary absolute top-[-3px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"
+            ></span>
+            Tooltip Text
+          </div>
+          <span class="text-xs text-red-500" v-if="v$.confirmPassword.$error">{{
+            v$.confirmPassword.$errors[0].$message
+          }}</span></div>
 
       <button
           type="submit"
@@ -62,17 +82,17 @@
           data-your_own_param_1_to_login="any_value"
           data-your_own_param_2_to_login="any_value">
         </div>-->
-      </div> 
+      </form>
       <div class="bg-no-repeat bg-cover bg-center bg-fixed" style="background-image: url('/images/dentro.jpg');">
         google-fb
-      </div>
     </div>
-  </div>
+    </div>
+    </div>
 </template>
   
   <script setup>
   import { useVuelidate } from '@vuelidate/core';
-  import { required, email, sameAs, minLength,helpers } from '@vuelidate/validators';
+  import { required, email, sameAs,minLength, maxLength, helpers } from '@vuelidate/validators';
 
 
   definePageMeta({
@@ -83,9 +103,17 @@ const formData = reactive({
   username: '',
   email: '',
   password: '',
-  confirmPassword: '',
+  confirmPassword: null,
   
 });
+
+const validations = {
+  checkLowerCase: helpers.regex(/[a-z]/),
+  checkUpperCase: helpers.regex(/[A-Z]/),
+  checkNumbers: helpers.regex(/[0-9]/),
+  checkSpecial: helpers.regex(/[!@#$%^&*_=+-]/),
+  checkLength: helpers.regex(/^.{6,16}$/)
+}
 
 const rules = computed(() => {
   return {
@@ -98,7 +126,11 @@ const rules = computed(() => {
     },
     password: {
       required: helpers.withMessage('The password field is required', required),
-      minLength: minLength(6),
+      lowerCase: helpers.withMessage('Must at least contain one lowercase letter', validations.checkLowerCase),
+      upperCase: helpers.withMessage('Must at least contain one uppercase letter', validations.checkUpperCase),
+      numbers: helpers.withMessage('must at least contain one number', validations.checkNumbers),
+      special: helpers.withMessage('Must at least contain one special character', validations.checkSpecial),
+      length: helpers.withMessage('Must be 6-16 characters', validations.checkLength)
     },
     confirmPassword: {
       required: helpers.withMessage('The password confirmation field is required', required),
@@ -108,6 +140,13 @@ const rules = computed(() => {
 });
 
   const v$ = useVuelidate(rules, formData);
+
+  const submitForm = () => {
+  v$.value.$validate();
+  if (!v$.value.$error) {
+    submit
+  }
+};
   </script>
   <style scoped>
   
